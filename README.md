@@ -19,3 +19,7 @@ A variable in css can be declared for any element, variables are scoped via casc
 2. `calc` in CSS:
 
 In order to do computations in CSS, use `calc`, its superpower is the ability to interpolate unit systems, esp. useful when dealing with `em` and `rem` with either `%` or `px` because the former cannot be determined in `px` in advance but depend on the font size.
+
+The declarations for `top-xs`, `top-md`, `top-lg` are the same, similarly for `middle` and `bottom` definitions. They should be `DRY`ed out??
+
+Definitions for `col-xs` cascade and clash with definitions for `col-xs` defined later. Why define clashing properties, me so confuze?
