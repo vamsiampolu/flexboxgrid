@@ -12,9 +12,9 @@ const containerSm = `calc(${smMin} + ${gutterWidth})`
 const containerMd = `calc(${mdMin} + ${gutterWidth})`
 const containerLg = `calc(${lgMin} + ${gutterWidth})`
 
-const phone = '@media only screen and (min-width: 48em)'
-const tablet = '@media only screen and (min-width: 64em)'
-const desktop = '@media only screen and (min-width: 75em)'
+const phone = `@media only screen and (min-width: ${smMin})`
+const tablet = `@media only screen and (min-width: ${mdMin})`
+const desktop = `@media only screen and (min-width: ${lgMin})`
 
 export const containerFluid = {
   paddingRight: outerMargin,
