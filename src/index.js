@@ -156,12 +156,48 @@ export const top = {
   alignItems: 'flex-start'
 }
 
+export const topPhone = {
+  [phone]: top
+}
+
+export const topTablet = {
+  [tablet]: top
+}
+
+export const topDesktop = {
+  [desktop]: top
+}
+
 export const middle = {
   alignItems: 'center'
 }
 
+export const middlePhone = {
+  [phone]: middle
+}
+
+export const middleTablet = {
+  [tablet]: middle
+}
+
+export const middleDesktop = {
+  [desktop]: middle
+}
+
 export const bottom = {
   alignItems: 'flex-end'
+}
+
+export const bottomPhone = {
+  [phone]: bottom
+}
+
+export const bottomTablet = {
+  [tablet]: bottom
+}
+
+export const bottomDesktop = {
+  [desktop]: bottom
 }
 
 export const around = {
@@ -176,7 +212,30 @@ export const first = {
   order: 1
 }
 
+export const firstPhone = {
+  [phone]: first
+}
+
+export const firstTablet = {
+  [tablet]: first
+}
+
+export const firstDesktop = {
+  [desktop]: first
+}
+
 export const last = {
   order: -1
 }
 
+export const lastPhone = {
+  [phone]: last
+}
+
+export const lastTablet = {
+  [tablet]: last
+}
+
+export const lastDesktop = {
+  [desktop]: last
+}
