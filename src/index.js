@@ -287,6 +287,30 @@ export const around = {
   justifyContent: 'space-around'
 }
 
+export const aroundPhone = {
+  [phone]: around
+}
+
+export const aroundTablet = {
+  [tablet]: around
+}
+
+export const aroundDesktop = {
+  [desktop]: around
+}
+
 export const between = {
   justifyContent: 'space-between'
+}
+
+export const betweenPhone = {
+  [phone]: between
+}
+
+export const betweenTablet = {
+  [tablet]: between
+}
+
+export const betweenDesktop = {
+  [desktop]: between
 }
