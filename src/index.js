@@ -2,6 +2,7 @@ const gutterWidth = '1rem'
 const outerMargin = '2rem'
 const gutterCompensation = '-0.5rem'
 const halfGutterWidth = '0.5rem'
+const TOTAL_COLUMNS = 12
 
 const smMin = '48em'
 const mdMin = '64em'
@@ -55,8 +56,6 @@ export const colReverse = {
   flexDirection: 'col-reverse'
 }
 
-const baseWidth = 8.33333333333
-
 const colBase = {
   boxSizing: 'border-box',
   flex: '0 0 auto',
@@ -80,6 +79,7 @@ export function col (columnSize) {
     throw new Error('Column size must be a number within the range 1-12')
   }
 
+  const baseWidth = 100 / TOTAL_COLUMNS
   const flexBasisNum = baseWidth * columnSize
   const flexBasis = `${flexBasisNum}%`
   const maxWidth = `${flexBasisNum}%`
@@ -89,11 +89,27 @@ export function col (columnSize) {
     maxWidth
   }
 
+  return result
+}
+
+export function colPhone (columnSize) {
+  const res = col(columnSize)
   return {
-    ...result,
-    [phone]: result,
-    [tablet]: result,
-    [desktop]: result
+    [phone]: res
+  }
+}
+
+export function colTablet (columnSize) {
+  const res = col(columnSize)
+  return {
+    [tablet]: res
+  }
+}
+
+export function colDesktop (columnSize) {
+  const res = col(columnSize)
+  return {
+    [desktop]: res
   }
 }
 
@@ -104,6 +120,7 @@ export function colOffset (offset) {
     throw new Error('Column offset must be a number within the range 1-12')
   }
 
+  const baseWidth = 100 / TOTAL_COLUMNS
   const marginLeftNum = baseWidth * offset
   const marginLeft = `${marginLeftNum}%`
   const result = {
@@ -111,11 +128,27 @@ export function colOffset (offset) {
     marginLeft
   }
 
+  return result
+}
+
+export function colOffsetPhone (offset) {
+  const res = colOffset(offset)
   return {
-    ...result,
-    [phone]: result,
-    [tablet]: result,
-    [desktop]: result
+    [phone]: res
+  }
+}
+
+export function colOffsetTablet (offset) {
+  const res = colOffset(offset)
+  return {
+    [tablet]: res
+  }
+}
+
+export function colOffsetDesktop (offset) {
+  const res = colOffset(offset)
+  return {
+    [desktop]: res
   }
 }
 
@@ -146,3 +179,4 @@ export const first = {
 export const last = {
   order: -1
 }
+
