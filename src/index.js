@@ -152,6 +152,38 @@ export function colOffsetDesktop (offset) {
   }
 }
 
+export const first = {
+  order: 1
+}
+
+export const firstPhone = {
+  [phone]: first
+}
+
+export const firstTablet = {
+  [tablet]: first
+}
+
+export const firstDesktop = {
+  [desktop]: first
+}
+
+export const last = {
+  order: -1
+}
+
+export const lastPhone = {
+  [phone]: last
+}
+
+export const lastTablet = {
+  [tablet]: last
+}
+
+export const lastDesktop = {
+  [desktop]: last
+}
+
 export const top = {
   alignItems: 'flex-start'
 }
@@ -200,42 +232,61 @@ export const bottomDesktop = {
   [desktop]: bottom
 }
 
+export const start = {
+  justifyContent: 'flex-start',
+  textAlign: 'start'
+}
+
+export const startPhone = {
+  [phone]: start
+}
+
+export const startTablet = {
+  [tablet]: start
+}
+
+export const startDesktop = {
+  [desktop]: start
+}
+
+export const center = {
+  justifyContent: 'center',
+  textAlign: 'center'
+}
+
+export const centerPhone = {
+  [phone]: center
+}
+
+export const centerTablet = {
+  [tablet]: center
+}
+
+export const centerDesktop = {
+  [desktop]: center
+}
+
+export const end = {
+  justifyContent: 'flex-end',
+  textAlign: 'end'
+}
+
+export const endPhone = {
+  [phone]: end
+}
+
+export const endTablet = {
+  [tablet]: end
+}
+
+export const endDesktop = {
+  [desktop]: end
+}
+
 export const around = {
   justifyContent: 'space-around'
 }
 
 export const between = {
   justifyContent: 'space-between'
-}
-
-export const first = {
-  order: 1
-}
-
-export const firstPhone = {
-  [phone]: first
-}
-
-export const firstTablet = {
-  [tablet]: first
-}
-
-export const firstDesktop = {
-  [desktop]: first
-}
-
-export const last = {
-  order: -1
-}
-
-export const lastPhone = {
-  [phone]: last
-}
-
-export const lastTablet = {
-  [tablet]: last
-}
-
-export const lastDesktop = {
-  [desktop]: last
 }
