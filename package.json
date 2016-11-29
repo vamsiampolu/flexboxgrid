@@ -1,5 +1,5 @@
 {
-  "name": "flexboxgrid.js",
+  "name": "flexboxgridjs",
   "version": "1.0.0",
   "description": "Attempt to understand and translate the kristoferjoseph/flexboxgrid repository to css-in-js and use it in vamsiampolu/css-in-js-test.",
   "main": "lib/index.js",
