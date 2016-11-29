@@ -1,5 +1,31 @@
 Converts the styles defined in [flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid) to vanilla javascript for use with various css-in-js libraries such as [glamor](https://github.com/threepointone/glamor) and [aphrodite](https://github.com/Khan/aphrodite).
 
+To install the module use:
+
+```
+npm install flexboxgridjs
+```
+
+To use the styles with a ibrary such as `glamor`:
+
+```js
+import { style, merge } from 'glamor';
+import { col, row, between } from 'flexboxgridjs';
+
+const colAuto = style(col());
+const dontExpand = style({
+  flexGrow: 0,
+  flexShrink: 0,
+});
+
+const headRoom = style({
+  marginTop: '2em',
+});
+
+const colFixedWidth = merge(colAuto, dontExpand, headRoom, style(between));
+const rowStyle = style(row);
+```
+
 The module offers a `12 column grid` that uses the `flexbox` specification to specify columns as flex children with rows as flex parents.
 
 **Media Queries**
